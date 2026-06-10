@@ -53,8 +53,12 @@ internal class ContactController
         Console.WriteLine("Insert new contact email address (Insert 0 to return to main menu):");
         string email = helpers.CheckEmail();
 
-        dbmanager.AddContact(name, number, email);
-        Console.WriteLine("\nNew Contact has been added in the Phonebook!");
+        if(email == "0") return;
+
+        if(dbmanager.AddContact(name, number, email))
+            Console.WriteLine("\nNew Contact has been added in the Phonebook!");
+        else
+            Console.WriteLine("\nContact added unsuccessful");
 
         Console.WriteLine("Would you like to add another contact?: (y/n)");
         string input = Console.ReadLine();
@@ -124,10 +128,12 @@ internal class ContactController
                 Console.WriteLine("Are you sure you want to delete this contact? (y/n)");
                 string confirmation = Console.ReadLine();
 
-                if (confirmation.Trim().ToLower() == "y")
+                if (!string.IsNullOrWhiteSpace(confirmation) && confirmation.Trim().ToLower() == "y")
                 {
-                    dbmanager.DeleteById(id);
-                    Console.WriteLine("Contact deleted sucessfully!");
+                    if (dbmanager.DeleteById(id))
+                        Console.WriteLine("Contact deleted sucessfully!");
+                    else
+                        Console.WriteLine("Delete contact unsuccessful");
                 }
                 else
                     Console.WriteLine("Delete contact cancelled");
@@ -231,8 +237,10 @@ internal class ContactController
 
                 }
 
-                dbmanager.UpdateById(id, contact.Name, contact.PhoneNumber, contact.EmailAddress);
-                Console.WriteLine("Contact update sucessful!");
+                if (dbmanager.UpdateById(id, contact.Name, contact.PhoneNumber, contact.EmailAddress))
+                    Console.WriteLine("Contact update sucessful!");
+                else
+                    Console.WriteLine("Contact update unsuccessful");
 
             }
         }
@@ -278,8 +286,4 @@ internal class ContactController
         Console.WriteLine("Press enter to go back to the main menu.");
         Console.ReadLine();
     }
-
-    
-
-
 }
