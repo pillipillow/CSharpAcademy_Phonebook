@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Phonebook.Model;
 
 namespace Phonebook;
@@ -9,7 +10,10 @@ internal class PhonebookContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=PhonebookDB;Trusted_Connection=True;");
+        IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+        string connectionString = config.GetConnectionString("DefaultConnection");
+
+        optionsBuilder.UseSqlServer(connectionString);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
