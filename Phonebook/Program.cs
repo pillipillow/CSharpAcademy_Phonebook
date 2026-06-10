@@ -1,1 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
+﻿using Phonebook;
+
+UserInterface userInterface = new UserInterface();
+userInterface.MainMenu();
