@@ -10,7 +10,9 @@ Phonebook is the third olive green belt project from the C# Academy. The project
 
 ## Features
 - Database using Entity Framework.
+
 ![Image](Assets/1.png)
+
 - CRUD functions:
     - Users insert their contact name, phone number and e-mail.
     - Users can view all contact and find contact by their name, 
