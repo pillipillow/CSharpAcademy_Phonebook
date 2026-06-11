@@ -4,8 +4,8 @@ namespace Phonebook;
 
 internal class Helpers
 {
-    const string PHONE_PATTERN = @"^\+?(\d{1,3})?[-. ]?\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$";
-    const string EMAIL_PATTERN = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+    const string PHONE_PATTERN = @"^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$";
+    const string EMAIL_PATTERN = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-z]{2,}$";
 
     internal string CheckName()
     {

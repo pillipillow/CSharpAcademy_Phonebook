@@ -45,7 +45,7 @@ internal class ContactController
 
         if (name == "0") return;
 
-        Console.WriteLine("Insert new contact phone number (00-0000-0000)(Insert 0 to return to main menu): ");
+        Console.WriteLine("Insert new contact phone number (ie.+15166024355)(Insert 0 to return to main menu): ");
         string number = helpers.CheckPhoneNumber();
 
         if(number == "0") return;
