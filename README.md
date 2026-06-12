@@ -23,13 +23,18 @@ Phonebook is the third olive green belt project from the C# Academy. The project
 
 ## Challenges
 - Learning about Entity Framework itself. This one is a bit different than other ORMS as you have to start coding the model, which are the entity (table) and then the database created. The setup is more elaborate than the other ORMs starting with making a Context class for configuration and a bridge between the project and the database, and create a migration through Package Manager Console to create the whole database. For CRUD operations, EF Core execute SQL commands for you, but instead of SQL, I have to learn LINQ commands to Read, Update and Delete.
+
 ![Image](Assets/3.png)
+
 DBContext class
+
 ![Image](Assets/4.png)
+
 An example of CRUD command using LINQ with EF Core.
 
 - Learning about Regex Patterns. 
 Regex patterns is something I've seen before but I never really understand what it does. It's basically a way for the computer to identify the pattern such as e-mails "@", domain suffixes for email and phone number sequences to be extracted from a string. 
+
 ![Image](Assets/5.png)
 
 
