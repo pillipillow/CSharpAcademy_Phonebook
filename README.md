@@ -1,4 +1,4 @@
-# CSharpAcademy_Phonebook
+# Phonebook
 Phonebook is the third olive green belt project from the C# Academy. The project introduces a popular ORM called Entity Framework onto the project. I programmed using C# with packages such as Entity Framework Core and SQL Server Management for the database with Visual Studio 2026. I also use Google Gemini to explain certain things or when I get stuck.
 
 ## Requirements
