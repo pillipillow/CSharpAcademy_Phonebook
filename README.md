@@ -18,6 +18,7 @@ Phonebook is the third olive green belt project from the C# Academy. The project
     - Users can view all contact and find contact by their name, 
     - Users can delete and update contact using a combination of Name and ID to prevent conflicts from duplicate names.
     - Phone number and E-mail are validated using Regex pattern.
+
 ![Image](Assets/2.png)
 
 ## Challenges
